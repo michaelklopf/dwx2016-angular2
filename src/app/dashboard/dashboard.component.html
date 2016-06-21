@@ -6,4 +6,8 @@
 
 <hr>
 
-<book-rating-book [book]="book" *ngFor="let book of books"></book-rating-book>
+<book-rating-book
+  [book]="book"
+  (rated)="sort($event)"
+  *ngFor="let book of books">
+</book-rating-book>

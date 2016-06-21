@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../shared';
 
 @Component({
@@ -9,15 +9,20 @@ import { Book } from '../shared';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
+  @Output() rated: EventEmitter<Book>;
 
-  constructor() {}
+  constructor() {
+    this.rated = new EventEmitter<Book>(); // geht mit und ohne <Book> vor ()
+  }
 
   rateUp() {
     this.book.rateUp();
+    this.rated.emit(this.book);
   }
 
   rateDown() {
     this.book.rateDown();
+    this.rated.emit(this.book);
   }
 
   ngOnInit() {

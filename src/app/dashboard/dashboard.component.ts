@@ -20,6 +20,10 @@ export class DashboardComponent implements OnInit {
     //console.log("Hello", title.value, description.value);
   }
 
+  sort(book: Book) {
+    this.books.sort((a, b) => b.rating - a.rating);
+  }
+
   ngOnInit() {
     this.books = [
       new Book('Angular 2', 'Super geiles Buch', 1),

@@ -1,1 +1,9 @@
+<form action="" class="form">
+  <input class="form-control" #title>
+  <input class="form-control" #description>
+  <button (click)="add(title, description)" class="btn btn-danger">Submit</button>
+</form>
+
+<hr>
+
 <book-rating-book [book]="book" *ngFor="let book of books"></book-rating-book>

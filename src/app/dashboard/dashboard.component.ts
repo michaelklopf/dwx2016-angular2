@@ -14,9 +14,15 @@ export class DashboardComponent implements OnInit {
 
   constructor() {}
 
+  add(title, description) {
+    this.books.push(new Book(title.value, description.value));
+    title.value = description.value = '';
+    //console.log("Hello", title.value, description.value);
+  }
+
   ngOnInit() {
     this.books = [
-      new Book('Angular 2', 'Super geiles Buch'),
+      new Book('Angular 2', 'Super geiles Buch', 1),
       new Book('ReactJS', 'auch nicht schlecht')
     ];
   }

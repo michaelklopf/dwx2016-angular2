@@ -9,5 +9,5 @@ import { DashboardComponent } from './dashboard';
   directives: [DashboardComponent]
 })
 export class BookRatingAppComponent {
-  
+  title: string = 'Hello DWX';
 }

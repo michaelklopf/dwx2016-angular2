@@ -4,4 +4,12 @@ export class Book {
         public description: string,
         public rating: number = 0
     ) {}
+
+    rateUp() {
+        this.rating++;
+    }
+
+  rateDown() {
+    this.rating--;
+  }
 }

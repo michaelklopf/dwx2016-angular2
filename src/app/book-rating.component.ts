@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['book-rating.component.css']
 })
 export class BookRatingAppComponent {
-  title = 'book-rating works!';
+  title = 'book-rating works at dwx!';
 }

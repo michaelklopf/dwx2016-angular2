@@ -1,0 +1,25 @@
+# based on RC2
+# initial install
+npm install -g typings
+npm install -g angular-cli
+ng help
+ng new book-rating
+cd book-rating
+npm start
+
+# add boostrap
+# change angular-cli-build.js
+npm install --save bootstrap
+# edit index.html
+
+# create component
+ng generate component dashboard
+# edit dashboard.component.ts and book-rating.component.ts
+
+# add book component, but in a place where components are shared
+ng generate class shared/book
+
+ng generate component book
+# edit dashboard component to add books
+
+# selector is used for integration of components in other components
